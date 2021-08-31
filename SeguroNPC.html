@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title> Seguros No Pagamos Cooperativa</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h2>No pagamos cooperativa</h2>
+      </div>
+    </header>
+    <div class="conteiner">
+      <div class="titulo">
+        <h1>Solicitud de contacto:</h1>
+        <hr>
+      </div>
+      <div class="formulario">
+        <form class="elementos">
+          <div class="elemento">
+            <label>Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+          </div>
+          <div class="elemento">
+            <label>Apellido:</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+          </div>
+          <div class="elemento">
+            <label>DNI:</label>
+            <input type="text" name="dni" id="dni" placeholder="DNI">
+          </div>
+          <div class="elemento">
+            <label>Email:</label>
+            <input type="text" name="email" id="email" placeholder="Email">
+          </div>
+          <div class="elemento">
+            <label>Telefono:</label>
+            <input type="text" name="telefono" id="telefono" placeholder="Telefono">
+          </div>
+          <div class="elemento">
+            <label id="prueba">Tipo de seguro:</label>
+            <select id="tipo" onChange="precio()">
+              <option value="null"> Tipo</option>
+              <option value="basico">Basico</option>
+              <option value="intermedio">Intermedio</option>
+              <option value="premium">Premium</option>
+            </select>
+          </div>
+          <div class="precio">
+            <h2 id="precio"></h2>
+          </div>
+          <div class="elemento">
+            <button type="button" name="button" onclick="enviar()">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+   <!-- JS -->
+   <script type="text/javascript">
+     function precio(){
+       var tipo = document.getElementById('tipo').value;
+       var cartel = document.getElementById('precio');
+       switch (tipo) {
+         case 'basico':
+            cartel.innerHTML = "$500";
+           break;
+         case 'intermedio':
+            cartel.innerHTML = "$1000";
+           break;
+         case 'premium':
+            cartel.innerHTML = "$1500";
+           break;
+         case 'null':
+            cartel.innerHTML ='';
+
+       }
+     }
+
+     function enviar(){
+       alert("Los datos fueron enviados.");
+     }
+   </script>
+  </body>
+</html>

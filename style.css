@@ -1,0 +1,53 @@
+body {
+  background-color: #CDD1D6;
+  padding: 0;
+  margin: 0px;
+  font-family: "Arial", sans-serif;
+}
+
+header {
+  background-color: #2EA043;
+}
+ hr {
+   border-color: #282C34;
+ }
+/* clases */
+
+.header {
+  background-color: #2EA043;
+  height: 50px;
+  justify-content:center;
+  align-items: center;
+  display: flex;
+  color: #F0F0F0;
+}
+
+.titulo {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.formulario{
+  background-color: #F0F0F0;
+  width: 35%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 8%;
+}
+
+.precio {
+  display: block;
+  margin: 1em auto;
+  color: #2EA043;
+}
+
+.elementos{
+  display: grid;
+  margin:auto;
+  justify-content: center;
+}
+
+.elemento{
+  display: block;
+  margin: 0.5em auto;
+}
